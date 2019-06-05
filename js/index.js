@@ -295,6 +295,9 @@ function reveal() {
 
   loop();
 
+  let audio = document.createElement("embed");
+  audio.setAttribute("src", "./audio/JLGogg.ogg");
+
   var w, h;
   if (window.innerWidth >= 1000) {
     w = 295;h = 185;
@@ -302,11 +305,15 @@ function reveal() {
   {
     w = 255;h = 155;
   }
-
+  
+  
   var ifrm = document.createElement("iframe");
   ifrm.setAttribute("src", "https://www.youtube.com/embed/McV4pBRb-Sg");
   //ifrm.style.width = `${w}px`;
   //ifrm.style.height = `${h}px`;
   ifrm.style.border = 'none';
   document.querySelector('#video').appendChild(ifrm);
+  
+
+  
 }
